@@ -15,4 +15,4 @@ The above task creates `dist/bundle.js`.
 
 # Run
 
-Simply run dist/index.html in your browser
+Simply run `dist/index.html` in your browser
