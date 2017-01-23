@@ -1,0 +1,27 @@
+{
+    "version": "0.1.0",
+    "command": "gulp",
+    "isShellCommand": true,
+    "args": [
+        "--no-color"
+    ],
+    "tasks": [
+		{
+			"taskName": "compile",
+			"isBuildCommand": true,
+			"showOutput": "always"
+		},
+		{
+			"taskName": "through",
+			"showOutput": "always"
+		},
+		{
+			"taskName": "bundle",
+			"showOutput": "never"
+		},
+		{
+			"taskName": "clean",
+			"showOutput": "never"
+		}
+	]
+}
