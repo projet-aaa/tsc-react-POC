@@ -1,16 +1,13 @@
 /// <reference path="../typings/index.d.ts" />
 
 import * as React from 'react';
-import { Router, IndexRoute, Route, browserHistory } from 'react-router'
+import { Router, IndexRoute, Route, browserHistory, hashHistory } from 'react-router'
 import { Main, Home } from './Main/main';
 
-export interface IMainRouterState {}
-export interface IMainRouterProps {}
-
-export class MainRouter extends React.Component<IMainRouterProps, IMainRouterState> {
+export class MainRouter extends React.Component<any, any> {
 
     render () {
-        return <Router>
+        return <Router history={hashHistory}>
 			<Route path="/" component={Main}>
 				<IndexRoute component={Home}/>
 			</Route>
