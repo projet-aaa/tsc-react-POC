@@ -1,6 +1,7 @@
 /// <reference path="../../typings/index.d.ts" />
 
 import * as React from 'react';
+import { Link } from 'react-router';
 import {TodoItem} from './todoItem';
 
 interface ITodo {
@@ -59,6 +60,7 @@ export class Home extends React.Component<IHomeProps, IHomeState> {
         });
         return (
             <div>
+				<Link to="/stuff">stuff</Link>
                 <div>
                     <input type="text" placeholder="input new item" value={this.state.newItem.description} onChange={this.changeName} />
                     <button onClick={this.addItem} >add</button>
