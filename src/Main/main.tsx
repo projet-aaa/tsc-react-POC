@@ -1,4 +1,4 @@
-/// <reference path="../../typings/react/react.d.ts" />
+/// <reference path="../../typings/index.d.ts" />
 
 import * as React from 'react';
 import {TodoItem} from './todoItem';
@@ -8,18 +8,18 @@ interface ITodo {
     key: number;
 }
 
-export interface IMainState {
+export interface IHomeState {
     newItem?: {
         description: string;
     };
     todoList?: ITodo[];
 }
 
-export interface IMainProps {}
+export interface IHomeProps {}
 
-export class Main extends React.Component<IMainProps, IMainState> {
+export class Home extends React.Component<IHomeProps, IHomeState> {
 
-    state: IMainState = {newItem: {description: ''}, todoList: []}
+    state: IHomeState = {newItem: {description: ''}, todoList: []}
 
     constructor () {
         super();
@@ -67,4 +67,14 @@ export class Main extends React.Component<IMainProps, IMainState> {
             </div>
         );
     }
+}
+
+export interface IMainState {}
+export interface IMainProps {}
+
+export class Main extends React.Component<IMainProps, IMainState> {
+	
+	render() {
+		return <div> {this.props.children} </div>
+	}
 }
